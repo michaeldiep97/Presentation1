@@ -15,7 +15,7 @@ ul.nav li {
 
 }
 
-ul.nav li a {
+ul.nav li a, div {
 	display: inline-block;
     font-size: 20px;
     padding: 5px 20px;
@@ -24,7 +24,7 @@ ul.nav li a {
     color: white;
 }
 
-ul.nav li a:hover {
+ul.nav li a:hover, div:hover{
 	background-color: #7070ff;
 }
 
