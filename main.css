@@ -1,0 +1,33 @@
+ul.nav {
+    background-color: #707070; 
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+	  position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+ul.nav li {
+	  float: left;
+    
+}
+
+ul.nav li a {
+	  display: inline-block;
+    font-size: 20px;
+    padding: 5px 20px;
+	  text-decoration: none;
+    font-family: calibri;
+    color: white;
+}
+
+ul.nav li a:hover {
+	  background-color: #7070ff;
+}
+
+ul.nav li a.active {
+	  background-color: #7070ff;
+}
