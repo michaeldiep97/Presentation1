@@ -5,13 +5,13 @@ ul.nav {
     margin: 0;
     padding: 0;
     overflow:hidden;
-	  position: -webkit-sticky; /* Safari */
+	position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
 }
 
 ul.nav li {
-	  float: left;
+	float: left;
     
 }
 
