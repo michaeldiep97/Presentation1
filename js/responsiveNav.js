@@ -1,7 +1,7 @@
 /* import this function at runtime (in html body) */
 
 //listener function
-const width = window.matchMedia("(max-width: 830px)");
+const width = window.matchMedia("(max-width: 1020px)");
 function switchToMobile(width) {
 	var navItems = document.getElementsByClassName("navItem");
 	if (width.matches) {
