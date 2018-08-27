@@ -4,7 +4,7 @@ ul.nav {
 	background-color: #606080; 
 	list-style-type: none;
 	margin: -10px -10px 0px -10px;
-	padding: 0px 10px 0px 10px;
+	padding: 0px 20px 0px 0px;
 	overflow:hidden;
 	position: -webkit-sticky; /* safari */
 	position: sticky;
@@ -26,6 +26,10 @@ li a {
 }
 
 li a:hover, .dropdown:hover {
+    background-color: #7070ff;
+}
+
+li a:active {
     background-color: #7070ff;
 }
 
