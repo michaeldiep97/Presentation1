@@ -1,11 +1,14 @@
 /* navbar styling */
-#nav {
+ul.nav {
 	width: 100%;
-    list-style-type: none;
+	background-color: #606080; 
+	list-style-type: none;
 	margin: -10px -10px 0px -10px;
 	padding: 0px 20px 0px 0px;
-    overflow: hidden;
-    background-color: #606080; 
+	overflow:hidden;
+	position: -webkit-sticky; /* safari */
+	position: sticky;
+	top: 0;
 }
 
 li {
@@ -13,7 +16,7 @@ li {
 }
 
 li a {
-    display: inline-block;
+	display: inline-block;
     font-size: 20px;
     color: white;
 	text-align: center;
@@ -24,10 +27,11 @@ li a {
 
 li.dropdown {
     display: inline-block;
+	position: relative;
 }
 
 .dropdown-content {
-    display: none;
+    display: block;
     position: absolute;
     background-color: #7070ff;
     min-width: 160px;
@@ -36,7 +40,7 @@ li.dropdown {
 }
 
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -136,15 +140,3 @@ hr{
 		color: #404040
 	}
 }
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky {
-  padding-top: 60px;
-} 

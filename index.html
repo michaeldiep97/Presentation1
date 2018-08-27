@@ -5,6 +5,12 @@
 	[href="index.html"] {
 		background-color: black;
 	}
+	.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		padding-top: 60px;
+	}
 </style>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +28,21 @@
 		
 		<!-- footer -->
 		<div w3-include-html="templates/footer.html"></div>
-		<script>includeHTML()</script>
+		<script>
+			includeHTML();
+			window.onscroll = function() {myFunction()};
+
+			var navbar = document.getElementById("nav");
+			var sticky = navbar.offsetTop;
+
+			function myFunction() {
+				if (window.pageYOffset >= sticky) {
+				navbar.classList.add("sticky")
+				} else {
+				navbar.classList.remove("sticky");
+				}
+			}
+		</script>
+		<script src="js/stickyNav.js"></script>
 	</body>
 </html>
