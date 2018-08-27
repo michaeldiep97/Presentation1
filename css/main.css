@@ -1,18 +1,23 @@
 /* navbar styling */
-#nav {
+#navbar {
 	width: 100%;
-    list-style-type: none;
-	margin: -10px -10px 0px -10px;
+    
+	margin: 0px -10px 0px -10px;
 	padding: 0px 20px 0px 0px;
     overflow: hidden;
     background-color: #606080; 
 }
-
-li {
+#navlist {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 0 -3px 0;
+	padding: 0;
+}
+.navItem {
     float: left;
 }
 
-li a {
+.navItem a {
     display: inline-block;
     font-size: 20px;
     color: white;
@@ -22,13 +27,13 @@ li a {
     font-family: calibri;
 }
 
-li.dropdown {
+.dropdown { /* here for redundancy of .navitem class */
     display: inline-block;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    positiodn: absolute;
     background-color: #7070ff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -36,14 +41,14 @@ li.dropdown {
 }
 
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
 }
 
-li a:hover, .dropdown:hover {
+.navItem:hover, .dropdown:hover {
     background-color: #7070ff;
 }
 
@@ -52,6 +57,41 @@ li a:hover, .dropdown:hover {
 }
 .dropdown-content a:hover {
 	background-color: #6060ff
+}
+
+/* responsive sidenav styling */
+
+#sidebar {
+	display: none; 
+	background-color: inherit; 
+	z-index: 5;
+}
+
+#openNav {
+	background-color: inherit;
+	display: none;
+	border: none;
+	float:left; 
+	font-size: 20px; 
+	padding: 4px 20px;
+}
+
+#closeNav {
+	background-color: inherit;
+	display: none;
+	border: none;
+	float:left; 
+	font-size: 25px; 
+	padding: 4px 20px;
+}
+
+
+#openNav:hover {
+	color: white;
+}
+
+#closeNav:hover {
+	color: red;
 }
 
 /* footer styling*/
@@ -85,7 +125,7 @@ li a:hover, .dropdown:hover {
 }
 
 /* styling social media buttons */
-.fa {
+.fa.fa-twitter {
 	margin: 10px;
     padding: 15px;
     font-size: 15px;
@@ -98,7 +138,7 @@ li a:hover, .dropdown:hover {
     color: white;
 }
 
-.fa:hover {
+.fa.fa-twitter:hover {
     opacity: 0.7;
 }
 
@@ -118,6 +158,25 @@ hr{
 		width: 40%;
 		color: #404040
 	}
+	
+	/* navlist for mobile devices */ 
+	#navlist {
+		display: none;
+	}
+	
+	#openNav, #closeNav {
+		background-color: inherit;
+		border: none;
+	}
+	
+	#openNav {
+		display: block;
+	}
+	
+	
+	#closeNav {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 540px) {
@@ -135,6 +194,10 @@ hr{
 		width: 100%;
 		color: #404040
 	}
+}
+
+@media only screen and (max-width: 500px) {
+	
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */

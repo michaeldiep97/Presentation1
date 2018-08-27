@@ -6,43 +6,40 @@
 		background-color: black;
 	}
 	.sticky {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		padding-top: 60px;
-	}
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 </style>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script src="js/includeHTML.js"></script>
+		<script src="js/sidebarOverlay.js"></script>
+		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<!-- header -->
-		<div w3-include-html="templates/nav.html"></div>
-			
-		<!-- placeholder content -->
-		<div style="margin-top: 1000px">
+		<div w3-include-html="templates/navbar.html"></div>
+
+		<!-- Page Content (should close sidebar on click but soesnt yet)-->
+		<div onclick="sBclose()" style="cursor:unset" id="overlay">
+			<!-- placeholder content -->
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+				
+			<!-- footer -->
+			<div w3-include-html="templates/footer.html"></div>
 		</div>
-		
-		<!-- footer -->
-		<div w3-include-html="templates/footer.html"></div>
+
+		<!-- call template includer at runtime -->
 		<script>
 			includeHTML();
-			window.onscroll = function() {myFunction()};
-
-			var navbar = document.getElementById("nav");
-			var sticky = navbar.offsetTop;
-
-			function myFunction() {
-				if (window.pageYOffset >= sticky) {
-				navbar.classList.add("sticky")
-				} else {
-				navbar.classList.remove("sticky");
-				}
-			}
 		</script>
-		<script src="js/stickyNav.js"></script>
+		<script src="js/responsiveNav.js"></script>
 	</body>
 </html>
