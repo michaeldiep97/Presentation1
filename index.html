@@ -14,16 +14,21 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script src="js/includeHTML.js"></script>
 		<script src="js/sidebarOverlay.js"></script>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
 		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<!-- header -->
 		<div w3-include-html="templates/navbar.html"></div>
-
-		<br><br><br><br><br><br><br><br><br>
+		
+		<!-- Slick carousel -->
+		<div class="single-item" style="z-index: 0">
+			<div><img src="images/lens.jpg" alt="camera_lens" style="height: 40vw; width: 100%;"></div>
+			<div><img src="images/swirly.jpg" alt="night_sky" style="height: 40vw; width: 100%;"></div>
+			<div><img src="images/mac_mountains.jpg" alt="mountains" style="height: 40vw; width: 100%;"></div>
+			<div><img src="images/5k_image.jpg" alt="more_mountains" style="height: 40vw; width: 100%;"></div>
+		</div>
+		
 		<!-- footer -->
 		<div w3-include-html="templates/footer.html"></div>
 
@@ -34,17 +39,44 @@
 		<script src="js/responsiveNav.js"></script>
 		<script src="js/stickyNav.js"></script>
 		
-		<!-- Slick scripts -->
-		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<!-- Slick scripts and jquery dependency-->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="slick/slick.min.js"></script>
 		
 		<script>
-			$(document).ready(function(){
-			  $('.your-class').slick({
-				setting-name: setting-value
-			  });
+		$(document).ready(function(){
+			$(".single-item").slick({
+				dots: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 5000,
+				/*responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3,
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]*/
 			});
+		});
 		</script>
 	</body>
 </html>

@@ -29,6 +29,7 @@
 	padding: 0px 20px 0px 0px;
     overflow: hidden;
     background-color: #093968; 
+	z-index: 1;
 }
 #navlist {
 	display: inline-block;
@@ -167,6 +168,10 @@
     opacity: 0.7;
 }
 
+/* body styling */
+h1, h2, h3, h4, p {
+	font-family: Arial;
+}
 /* miscellaneous styles */
 hr{
     border: 0;
